@@ -1,0 +1,36 @@
+$spacer: 1rem;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query:false;
+$enable-grid-classes:true;
+$enable-print-styles:true;
+
+
+$grid-columns: 12;
+$grid-gutter-width-base: 30px;
+
+
+$grid-gutter-widths: (
+  xs:  $grid-gutter-width-base, // 30px
+  sm:  $grid-gutter-width-base, // 30px
+  md:  $grid-gutter-width-base, // 30px
+  lg:  $grid-gutter-width-base, // 30px
+  xl:  $grid-gutter-width-base,  // 30px
+  xxl: $grid-gutter-width-base  // 30px
+);
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
