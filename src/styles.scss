@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import 'classes';
+@import 'bootstrap4';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,900');
+
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  @extend .font-paragraph;
+  background-color: $color-light;
+}// Html, Body
+
+
+.debug {
+  border:1px solid greenyellow !important;
+}//debug

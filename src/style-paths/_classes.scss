@@ -1,0 +1,21 @@
+
+@import 'variables';
+
+
+.font-title {
+  font-family: $familyFont;
+  font-size: $fontSize-title;
+  font-weight: $fontWeight-title;
+}// Font-title
+
+.font-paragraph {
+  font-family: $familyFont;
+  font-size: $fontSize-paragraph;
+  font-weight: $fontWeight-paragraph;
+}// Font-paragraph
+
+.font-detail {
+  font-family: $familyFont;
+  font-size: $fontSize-detail;
+  font-weight: $fontWeight-detail;
+}// Font-detail
