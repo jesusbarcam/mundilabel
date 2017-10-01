@@ -1,0 +1,10 @@
+@import 'classes';
+
+.unknow-page-wrapper {
+  margin-top:20%;
+
+  h1 {
+    @extend .font-title;
+  }//h1
+  
+}//unknow-page-wrapper
