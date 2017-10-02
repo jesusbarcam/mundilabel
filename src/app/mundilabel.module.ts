@@ -7,7 +7,7 @@ import { MundilabelRouting } from './mundilabel.routing';
 import { MundilabelComponent } from './mundilabel.component';
 import { UnknowPageComponent } from './components/unknow-page/unknow-page.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutAsComponent } from './components/about-as/about-as.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 
 
@@ -23,7 +23,7 @@ export function translateLoader(http: Http) {
     MundilabelComponent,
     UnknowPageComponent,
     HomeComponent,
-    AboutAsComponent,
+    AboutUsComponent,
     HowWeWorkComponent
   ],
   imports: [

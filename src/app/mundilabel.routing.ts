@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { AboutAsComponent } from './components/about-as/about-as.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 import { UnknowPageComponent } from './components/unknow-page/unknow-page.component';
 
@@ -11,7 +11,7 @@ import { UnknowPageComponent } from './components/unknow-page/unknow-page.compon
 const mundilabelRoutes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'home', pathMatch: 'full', component: HomeComponent },
-  {path: 'about', component: AboutAsComponent  },
+  {path: 'about', component: AboutUsComponent  },
   {path: 'howwework', component: HowWeWorkComponent },
   {path: '**', pathMatch: 'full', component: UnknowPageComponent }
 ];

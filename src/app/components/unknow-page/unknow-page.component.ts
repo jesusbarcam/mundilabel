@@ -10,6 +10,6 @@ export class UnknowPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  }// NgOnInit
 
-}
+}// UnknowPageComponent
