@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { MundilabelRoutes } from '../../../../mundilabel.routing';
@@ -7,7 +7,8 @@ import { MundilabelRoutes } from '../../../../mundilabel.routing';
 @Component({
   selector: 'navigator',
   templateUrl: './navigator.component.html',
-  styleUrls: ['./navigator.component.scss']
+  styleUrls: ['./navigator.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigatorComponent implements OnInit {
 
