@@ -9,6 +9,15 @@ import { UnknowPageComponent } from './components/unknow-page/unknow-page.compon
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavigatorComponent } from './components/header/components/navigator/navigator.component';
+import { LogotypeComponent } from './components/logotype/logotype.component';
+import { WallpaperComponent } from './components/wallpaper/wallpaper.component';
+
+import { MundilabelSettingsService } from './commons/mundilabel.settings';
+import { LocationComponent } from './components/location/location.component';
 
 
 
@@ -24,7 +33,14 @@ export function translateLoader(http: Http) {
     UnknowPageComponent,
     HomeComponent,
     AboutUsComponent,
-    HowWeWorkComponent
+    HowWeWorkComponent,
+    ContactComponent,
+    FooterComponent,
+    HeaderComponent,
+    NavigatorComponent,
+    LogotypeComponent,
+    WallpaperComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +48,7 @@ export function translateLoader(http: Http) {
     TranslateModule.forRoot()
   ],
   providers: [
+    MundilabelSettingsService,
     TranslateService,
     {
       provide: TranslateLoader,

@@ -8,6 +8,12 @@
   font-weight: $fontWeight-title;
 }// Font-title
 
+.font-widget {
+  font-family: $familyFont;
+  font-size: $fontSize-widget;
+  font-weight: $fontWeight-widget;
+}
+
 .font-paragraph {
   font-family: $familyFont;
   font-size: $fontSize-paragraph;
