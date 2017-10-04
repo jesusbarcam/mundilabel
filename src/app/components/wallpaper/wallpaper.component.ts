@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
+import { MundilabelSettingsService } from '../../commons/mundilabel.settings';
 @Component({
   selector: 'wallpaper',
   templateUrl: './wallpaper.component.html',
@@ -8,9 +9,18 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class WallpaperComponent implements OnInit {
 
-  constructor() { }
+
+  public wallpaperUrl: string;
+
+
+  constructor(private mundilabelSettings: MundilabelSettingsService) {
+    this.wallpaperUrl = mundilabelSettings.MUNDILABEL_WALLPAPERS[0];
+  }// Constructor
+
+
 
   ngOnInit() {
   }// NgOnInit
+
 
 }// WallpaperComponent
