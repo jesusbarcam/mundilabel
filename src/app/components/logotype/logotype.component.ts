@@ -1,4 +1,7 @@
 import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { MundilabelRoutes } from '../../mundilabel.routing';
 
 @Component({
   selector: 'logotype',
@@ -8,12 +11,31 @@ import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core
 })
 export class LogotypeComponent implements OnInit {
 
+
   @Input()
   private urlLogotype: string;
 
-  constructor() { }// Constructor
+
+  constructor(private router: Router) {
+  }// Constructor
+
+
 
   ngOnInit() {
   }// NgOnInit
+
+
+
+  /**
+   * @method
+   * @public
+   * @description
+   */
+  public navigationTo(indexRoutes: number) {
+    const urlRoute: string = MundilabelRoutes[indexRoutes].path;
+    this.router.navigateByUrl( urlRoute );
+  }// NavigationTo
+
+
 
 }// LogotypeComponent

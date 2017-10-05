@@ -1,22 +1,57 @@
 
+$xs: 420px !default;
+$sm: 580px !default;
+$md:760px !default;
+$lg:996px !default;
+$xl:1080px !default;
+
 
 .wallpaper-container {
-  position:relative;
+  position: relative;
   width: 100%;
-  height: 85vh;
+  height: 60vh;
 
-  background-position: center;
-  background-attachment: fixed;
+  background-position: top;
+  background-attachment: unset;
   background-repeat: no-repeat;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
   z-index: -1;
 
-}//Host
+}//wallpaper-container
+
+
+
+@media (min-width:$xl){
+    .wallpaper-container {
+      height: 100vh !important;
+    }//wallpaper-container  
+}// mediaXS
+
+
+
+
+@media (min-width:$md) and (max-width:$xl){
+    .wallpaper-container {
+      height: 60vh !important;
+    }//wallpaper-container  
+}// mediaXS
+
+
+
+
+
+@media (max-width:$sm){
+  .wallpaper-container {
+    height: 40vh !important;
+  }//wallpaper-container
+}// mediaXS
+
+
+
 
 
 
