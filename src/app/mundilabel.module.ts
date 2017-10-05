@@ -17,6 +17,7 @@ import { LogotypeComponent } from './components/logotype/logotype.component';
 import { WallpaperComponent } from './components/wallpaper/wallpaper.component';
 
 import { MundilabelSettingsService } from './commons/mundilabel.settings';
+import { MundilabelService } from './commons/mundilabel.service';
 import { LocationComponent } from './components/location/location.component';
 
 
@@ -48,6 +49,7 @@ export function translateLoader(http: Http) {
     TranslateModule.forRoot()
   ],
   providers: [
+    MundilabelService,
     MundilabelSettingsService,
     TranslateService,
     {

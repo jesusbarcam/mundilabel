@@ -9,15 +9,28 @@
   width: 100%;
   height: 100%;
   display:flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   .item {
     @extend .font-widget;
     color: $color-light;
     border-radius: 3px;
-    padding:0.2rem 0.8rem;
+    padding:0.2rem 2rem;
 
-    &:hover {
+
+    &.activated {
+      color: $color-selection;
+      
+      &:hover {
+        cursor:default;
+        background-color: none !important;
+      }//hover
+
+    }// activated
+
+    
+
+    &:not(.activated):hover {
       cursor: pointer;
       background-color: rgba($color-light,0.1);
     }//hover

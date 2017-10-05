@@ -1,7 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
 
 import { MundilabelRoutes } from '../../../../mundilabel.routing';
+import { MundilabelService } from '../../../../commons/mundilabel.service';
 
 
 @Component({
@@ -13,12 +14,46 @@ import { MundilabelRoutes } from '../../../../mundilabel.routing';
 export class NavigatorComponent implements OnInit {
 
 
-  constructor(private router: Router) {
+  private currentUrl: string;
+
+
+
+  constructor(private router: Router,
+              private mundilabelService: MundilabelService,
+              private changeDetection: ChangeDetectorRef) {
    }// Constructor
 
 
+
+
   ngOnInit() {
+    this.router.events.subscribe((data: any) => {
+
+      if ( data && data.url ) {
+        this.currentUrl = data.url.replace('/', '' );
+        this.mundilabelService.activateRoute( this.currentUrl );
+        this.changeDetection.markForCheck();
+      }// If
+
+    }); // Subscribe
+
   }// NgOnInit
+
+
+
+
+  /**
+   * @method
+   * @public
+   * @param index
+   * @description
+   */
+  public isActivated(index: number) {
+    return (this.currentUrl === MundilabelRoutes[ index ].path );
+  }// IsActivated
+
+
+
 
 
 

@@ -6,6 +6,10 @@
   display: flex;
   align-items: center;
 
+  &:hover {
+    cursor: pointer;
+  }//hover
+
   h1 {
     color: $color-light;
     font-size: 3rem;
