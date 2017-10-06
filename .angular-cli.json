@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/scss/bootstrap-grid.scss",
+        "../node_modules/animate.css/animate.css",
         "styles.scss"
       ],
       "stylePreprocessorOptions": {
