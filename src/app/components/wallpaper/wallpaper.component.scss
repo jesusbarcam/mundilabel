@@ -1,9 +1,13 @@
+@import 'variables';
+@import 'classes';
+
 
 $xs: 420px !default;
 $sm: 580px !default;
 $md:760px !default;
 $lg:996px !default;
 $xl:1080px !default;
+
 
 
 .wallpaper-container {
@@ -21,6 +25,26 @@ $xl:1080px !default;
   background-size: cover;
   z-index: -1;
 
+  .flex-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wallpaper-titles {
+      margin:3rem;
+
+      h1 {
+        @extend .font-title;
+        font-size: 6.5rem !important;
+        color: $color-light;
+        text-align: center;
+      }//h1
+      
+    }// Wallpaper-titles
+
+  }// Flex-wrapper
+
 }//wallpaper-container
 
 
@@ -37,6 +61,16 @@ $xl:1080px !default;
 @media (min-width:$md) and (max-width:$xl){
     .wallpaper-container {
       height: 60vh !important;
+
+      .wallpaper-titles {
+        margin:2rem;
+  
+        h1 {
+          font-size: 3.5rem !important;
+        }//h1
+        
+      }// Wallpaper-titles
+
     }//wallpaper-container  
 }// mediaXS
 
@@ -44,10 +78,16 @@ $xl:1080px !default;
 
 
 
-@media (max-width:$sm){
+@media (max-width:$sm) {
+
   .wallpaper-container {
     height: 40vh !important;
+
+    .flex-wrapper .wallpaper-titles {
+        display: none;
+      }// Wallpaper-titles
   }//wallpaper-container
+
 }// mediaXS
 
 
