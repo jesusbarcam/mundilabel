@@ -1,5 +1,11 @@
 {
   "APPLICATION_COMMON":{
     "APPLICATION_NAME":"Mundilabel"
+  },
+  "TITLES_BY_ROUTE":{
+    "ABOUT":"No solo somos proveedores, también somos colaboradores",
+    "HOWWEWORK":"Utilizamos los materiales mas inovadores del mercado",
+    "LOCATION":"Siempre estamos cerca, atentos y preparados",
+    "CONTACT":"Dispuestos a coperar, colaborar y ayudar"
   }
 }

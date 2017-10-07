@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { TranslateService } from 'ng2-translate';
 
 import { MundilabelSettingsService, MundilabelService } from '../../commons';
 import { MundilabelRoutes } from '../../mundilabel.routing';
@@ -17,7 +18,11 @@ export class WallpaperComponent implements OnInit {
 
   public wallpaperUrl: string;
   public routeWithoutTitles: string;
+  public currentTitleOfRoute: string;
   private titleStartShow: boolean;
+
+
+
 
 
   /**
@@ -26,6 +31,7 @@ export class WallpaperComponent implements OnInit {
    * @param mundilabelService
    */
   constructor(private mundilabelSettings: MundilabelSettingsService,
+              private translateService: TranslateService,
               private mundilabelService: MundilabelService,
               private changeDetection: ChangeDetectorRef) {
 
@@ -72,12 +78,15 @@ export class WallpaperComponent implements OnInit {
         this.activatedNewRoute( activatedRoute );
         // and activatedRoute is route with titles
         if ( activatedRoute !== this.routeWithoutTitles ) {
+          const newTitle: string = this.selectTitleDependOfNextRoute( activatedRoute );
+          this.activateTitleOfNextRoute( newTitle );
           this.countDownStartTitleShow();
         }// If
       }// If
 
     }); // Subscribe
   }// InicializeControlOfRoutes
+
 
 
 
@@ -92,6 +101,43 @@ export class WallpaperComponent implements OnInit {
     this.changeDetection.markForCheck();
   }// Inicialize
 
+
+
+
+
+  /**
+   * @method
+   * @private
+   * @param title
+   * @description
+   */
+  private activateTitleOfNextRoute(title: string) {
+    this.translateService.get( title )
+        .subscribe(( translation: string ) => {
+          this.currentTitleOfRoute = translation;
+          this.changeDetection.markForCheck();
+        }); // Subscribe
+  }// ActivateTitleOfNextRoute
+
+
+
+
+
+
+  /**
+   * @method
+   * @private
+   * @description
+   */
+  private selectTitleDependOfNextRoute(nextRoute: string) {
+    switch ( nextRoute ) {
+      case MundilabelRoutes[2].path: return 'TITLES_BY_ROUTE.ABOUT';
+      case MundilabelRoutes[3].path: return 'TITLES_BY_ROUTE.HOWWEWORK';
+      case MundilabelRoutes[4].path: return 'TITLES_BY_ROUTE.LOCATION';
+      case MundilabelRoutes[5].path: return 'TITLES_BY_ROUTE.CONTACT';
+      default: return '';
+    }// Switch
+  }// SelectTitleDependOfNextRoute
 
 
   /**
