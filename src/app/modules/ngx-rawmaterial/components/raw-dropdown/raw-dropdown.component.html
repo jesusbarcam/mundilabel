@@ -1,0 +1,18 @@
+
+<div #dropdownContainer 
+      class="ifc-dropdown {{ position }}" 
+      [style.width]=" width + 'px'"
+      [style.left]=" left + 'px'"
+      [style.top]="top + 'px'" 
+      [ngClass]="{'animated':animate , 'fadeOutDown':startHidden , 'fadeInUp':visible , 'dark':dark}" 
+      [hidden]="!visible"
+      style="display:block" >
+
+  <div class="arrow" 
+      [ngClass]="{'dark':dark}" 
+      [style.left]="arrowPosition + 'px' " >
+  </div>
+
+  <ng-content></ng-content>
+
+</div>

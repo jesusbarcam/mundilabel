@@ -1,0 +1,61 @@
+
+$coorporativeColor: #043f60 !default;
+
+
+.ifc-dropdown{
+  position: fixed;
+  width: auto;
+  height: auto;
+  margin-top:10px;
+  //padding:2px;
+  color: $lightColor;
+  background-color: $lightColor;
+  z-index:1024;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
+}//ifc-dropdown
+
+
+
+
+.arrow {
+  position: fixed;
+  z-index: 1030;
+  content: '';
+  margin-top: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent $lightColor transparent;
+}// arrow
+
+
+
+.arrow.dark {
+  border-color: transparent transparent $coorporativeColor transparent;
+}//arrow.dark
+
+
+
+.ifc-dropdown.dark {
+  color:$lightColor;
+  background-color: $coorporativeColor;
+}//ifc-dropdown.dark
+
+
+
+
+
+
+
+@include media-breakpoint-down(md) {
+  .ifc-dropdown {
+    //right: calc(25% - 76px) !important;
+  }//ifc-dropdown
+}//@include media-breakpoint-down
+
+
+@include media-breakpoint-down(xs) {
+  .ifc-dropdown {
+    //right: calc(25% - 76px) !important;
+  }//ifc-dropdown
+}//@include media-breakpoint-down
