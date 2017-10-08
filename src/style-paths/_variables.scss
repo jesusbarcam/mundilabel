@@ -1,3 +1,4 @@
+
 // Fonts styles of Application
 $familyFont: 'Montserrat',sans-serif;
 
@@ -5,13 +6,22 @@ $fontSize-detail: 0.75rem;
 $fontSize-widget: 1.25rem;
 $fontSize-paragraph: 0.95rem;
 $fontSize-title: 4rem;
-$fontSize-icon: 2rem;
+$fontSize-icon: 2.2rem;
 
 $fontWeight-detail: 200;
 $fontWeight-widget: 100;
 $fontWeight-paragraph: 300;
 $fontWeight-title: 900;
 
+
+// Media queries for responsive design 
+// of this application
+$xs:  0;
+$sm:  576px;
+$md:  768px;
+$lg:  992px;
+$xl:  1200px;
+$xxl: 1800px;
 
 
 // Mains Colors of Application

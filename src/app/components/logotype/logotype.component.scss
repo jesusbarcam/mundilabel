@@ -14,11 +14,20 @@
     color: $color-light;
     font-size: 2rem;
     font-weight: 100;
-    opacity: 0.7;
     margin-bottom:0 !important;
   }//h1
 }//logotype
 
+
+
+/*
+Media query for dimension less of 450px of width */
+@media(max-width:$xl) {
+  .logotype {
+    h1 { font-size: 1.5rem !important;}//h1
+  }//logotype
+
+}// mediaXS
 
 
 

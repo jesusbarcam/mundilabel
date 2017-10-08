@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { Router,ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { MundilabelRoutes } from '../../../../mundilabel.routing';
 import { MundilabelService } from '../../../../commons/mundilabel.service';
@@ -12,6 +12,7 @@ import { MundilabelService } from '../../../../commons/mundilabel.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigatorComponent implements OnInit {
+
 
 
   private currentUrl: string;

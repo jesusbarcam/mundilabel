@@ -1,3 +1,5 @@
+@import 'variables';
+
 
 $spacer: 1rem;
 $enable-rounded: true;
@@ -8,30 +10,32 @@ $enable-hover-media-query:false;
 $enable-grid-classes:true;
 $enable-print-styles:true;
 
-
 $grid-columns: 12;
-$grid-gutter-width-base: 30px;
-
+$grid-gutter-width-base: 15px;
 
 $grid-gutter-widths: (
-  xs:  $grid-gutter-width-base, // 30px
-  sm:  $grid-gutter-width-base, // 30px
-  md:  $grid-gutter-width-base, // 30px
-  lg:  $grid-gutter-width-base, // 30px
-  xl:  $grid-gutter-width-base,  // 30px
-  xxl: $grid-gutter-width-base  // 30px
+  xs:  $grid-gutter-width-base, 
+  sm:  $grid-gutter-width-base, 
+  md:  $grid-gutter-width-base, 
+  lg:  $grid-gutter-width-base, 
+  xl:  $grid-gutter-width-base,  
+  xxl: $grid-gutter-width-base  
 );
 
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl:$xxl
 );
 
 $container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 960px
+  sm: $md,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl:$xxl
 );

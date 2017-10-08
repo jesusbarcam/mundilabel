@@ -1,9 +1,13 @@
 @import 'variables';
 @import 'classes';
 
+
+
 :host{
   background-color: none;
-}
+}//:host
+
+
 
 .navigator-wrapper {
   width: 100%;
@@ -38,3 +42,35 @@
   }//item
 
 }//navigator-wrapper
+
+
+
+
+
+.mini-navigator-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: $color-light;
+
+  i {
+    font-size: $fontSize-icon;
+  }//i
+}//mini-navigator-wrapper
+
+
+
+
+
+@media(max-width:$lg) {
+  
+  .navigator-wrapper {
+    display: none !important;
+  }//navigator-wrapper
+
+
+  .mini-navigator-wrapper {
+    display: flex;
+  }//mini-navigator-wrapper
+
+}// mediaQuery
