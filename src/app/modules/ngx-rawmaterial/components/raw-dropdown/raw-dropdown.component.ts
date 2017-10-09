@@ -1,7 +1,8 @@
-import { Component, HostListener, OnDestroy, ContentChildren, ElementRef,
-  Input, ViewChild, AfterViewInit, Renderer, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy, ContentChildren, ElementRef,
+  Input, ViewChild, AfterViewInit, Renderer, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { RawDropdownTriggerDirective } from './raw-dropdown-trigger.directive';
+
 
 
 export type DropdownPosition = 'start' | 'middle' | 'end';
@@ -9,11 +10,12 @@ export type DropdownPosition = 'start' | 'middle' | 'end';
 
 @Component({
   selector: 'raw-dropdown',
-  template: require('./raw-dropdown.component.html'),
-  styles: [ require('./raw-dropdown.component.scss') ]
+  templateUrl: './raw-dropdown.component.html',
+  styleUrls: [ './raw-dropdown.component.scss' ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class RawDropdownComponent implements AfterViewInit, OnDestroy {
+export class RawDropdownComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   @Input('position')
@@ -26,37 +28,37 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
   private dark: boolean;
 
   @Input('animate')
-  private animate:boolean;
+  private animate: boolean;
 
   @Input('closeWhenClickEvent')
-  private closeWhenClickEvent:any;
+  private closeWhenClickEvent: any;
 
   @Input('closeWhenMouseEvent')
-  private closeWhenMouseEvent:boolean;
+  private closeWhenMouseEvent: boolean;
 
 
 
   @ViewChild('dropdownContainer')
-  private dropdownContainer:ElementRef;
+  private dropdownContainer: ElementRef;
 
 
 
 
   // Atributos
-  private startHidden:boolean;
-  private visible:boolean;
-  private top:number;
-  private left:number;
-  private arrowPosition:number;
-  private listenClickEvent:any;
-  private listenMouseEvent:any;
-  private dropdownTrigger:IFCDropdownTriggerDirective;
+  private startHidden: boolean;
+  private visible: boolean;
+  private top: number;
+  private left: number;
+  private arrowPosition: number;
+  private listenClickEvent: any;
+  private listenMouseEvent: any;
+  private dropdownTrigger: RawDropdownTriggerDirective;
 
 
 
 
   constructor( private element: ElementRef,
-               private cdr: ChangeDetectorRef,
+               private changeDetector: ChangeDetectorRef,
                private renderer: Renderer ) {
 
     this.width = 420;
@@ -68,9 +70,21 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
     this.closeWhenMouseEvent = false;
     this.dark = false;
 
-  }//constructor
+  }// Constructor
 
-  
+
+
+
+  /**
+   * @method
+   * @lifecycle
+   */
+  ngOnInit() {
+  }// NgOnInit
+
+
+
+
 
 
   /**
@@ -81,7 +95,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * Add 'implements AfterViewInit' to the class.
    */
   ngAfterViewInit() {
-    // Injectamos los listener que necesitamos 
+    // Injectamos los listener que necesitamos
     // para manejar la funcionalidad del componente
     this.createListenerToClickEvent();
     this.createListenerToMouseEvent();
@@ -99,13 +113,9 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * Add 'implements OnDestroy' to the class.
    */
   ngOnDestroy() {
-    
     if (this.closeWhenClickEvent) { this.listenClickEvent(); }// If
     if (this.closeWhenMouseEvent) { this.listenMouseEvent(); }// If
-    
   }// NgOnDestroy
-
-
 
 
 
@@ -116,12 +126,12 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * @description
    */
   private createListenerToClickEvent() {
-    if( this.closeWhenClickEvent ) {
-      this.listenClickEvent = this.renderer.listenGlobal('document','mousedown', (event: any) => this.onDocumentTriggerEvent(event));  
+    if ( this.closeWhenClickEvent ) {
+      this.listenClickEvent = this.renderer.listenGlobal('document', 'mousedown', (event: any) => this.onDocumentTriggerEvent(event));
     }// If
   }// CreateListenerToClickEvent
-  
-  
+
+
 
 
 
@@ -132,8 +142,8 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    */
   private createListenerToMouseEvent() {
     if ( this.closeWhenMouseEvent ) {
-      this.listenMouseEvent = this.renderer.listenGlobal('document','mouseover', (event: any ) => this.onDocumentTriggerEvent(event));
-     }// If      
+      this.listenMouseEvent = this.renderer.listenGlobal('document', 'mouseover', (event: any ) => this.onDocumentTriggerEvent(event));
+     }// If
   }// CreateListenerToMouseEvent
 
 
@@ -146,7 +156,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * 
    */
   private onDocumentTriggerEvent = (event: any) => {
-    
+
     const element = this.element.nativeElement;
 
     if ( !element || !this.dropdownTrigger ) {
@@ -156,15 +166,15 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
     if (element.contains(event.target) || this.dropdownTrigger.getElement().contains(event.target)) {
       return;
     }// If
-    
     // Llamamos al cierre del dropdown desde el disparador
     // que es desde donde se debe hacer, el disparador es
     // el que lleva el control del estado del dropdown.
     this.dropdownTrigger.hide();
+    // this.onCloseFromOutside.emit(undefined);
 
-    //this.onCloseFromOutside.emit(undefined);
-    
-  };// OnDocumentTriggerEvent
+  }// OnDocumentTriggerEvent
+
+
 
 
 
@@ -173,22 +183,24 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
  * @private
  * @method
  * @description
- * Método encargado de reposicionar el dropdown 
+ * Método encargado de reposicionar el dropdown
  * en referencia al trigger dropdown directive
  */
   private reposition() {
 
     const trigger = this.dropdownTrigger.getElement();
     const dropdown = this.element.nativeElement;
-   
-    switch( this.position ) {
-      case 'end': this.endPositionWithFixedPosition(trigger,dropdown);break;
-      //case 'middle': this.middlePosition():break;
-      //case 'start': this.startPosition();break;
-      default: this.endPositionWithFixedPosition(trigger,dropdown);
-    }//switch
+
+    switch ( this.position ) {
+      case 'end': this.endPositionWithFixedPosition(trigger, dropdown); break;
+      // case 'middle': this.middlePosition():break;
+      // case 'start': this.startPosition();break;
+      default: this.endPositionWithFixedPosition(trigger, dropdown);
+    }// switch
 
   }// Reposition
+
+
 
 
 
@@ -197,21 +209,21 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
   /**
    * @private
    * @method
-   * @param trigger 
-   * @param dropdown 
+   * @param trigger
+   * @param dropdown
    * @description
-   * Posiciona en la parte final del dropdown 
+   * Posiciona en la parte final del dropdown
    * según la posición del trigger
    */
-  private endPositionWithFixedPosition(trigger:ElementRef,dropdown:ElementRef) {
+  private endPositionWithFixedPosition(trigger: ElementRef, dropdown: ElementRef) {
 
-    let triggerHost = this.offset( trigger );
-    let dropdownHost = this.offset( dropdown );
+    const triggerHost = this.offset( trigger );
+    const dropdownHost = this.offset( dropdown );
 
-    const position = Math.round( triggerHost.left );//(();
-    
-    this.left = (Math.round(position)) - ((this.width*75)/100);
-    this.arrowPosition = (position) + ((Math.round((triggerHost.width/2)))-(10));
+    const position = Math.round( triggerHost.left );
+
+    this.left = (Math.round(position)) - ((this.width * 75) / 100);
+    this.arrowPosition = (position) + ((Math.round((triggerHost.width / 2))) - (10));
 
   }// endPositionWithFixedPosition
 
@@ -227,14 +239,14 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * @param nativeEl
    * @description 
    */
-  private offset(nativeEl:any): { width: number, height: number, top: number, left: number } {
+  private offset(nativeEl: any): { width: number, height: number, top: number, left: number } {
     const boundingClientRect = nativeEl.getBoundingClientRect();
     return {
       width: boundingClientRect.width || nativeEl.offsetWidth,
       height: boundingClientRect.height || nativeEl.offsetHeight,
       top: boundingClientRect.top + (window.pageYOffset || window.document.documentElement.scrollTop),
       left: boundingClientRect.left + (window.pageXOffset || window.document.documentElement.scrollLeft)
-    }// return
+    }; // return
   }// Offset
 
 
@@ -247,31 +259,28 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * @protected
    * @method
    * @param nativeEl
-   * @description 
+   * @description
    */
   protected bodyPosition(nativeEl: HTMLElement): { width: number, height: number, top: number, left: number } {
-    
+
     let offsetParentBCR = { top: 0, left: 0 };
-    console.log("PERO QUE COÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑO!", nativeEl );
     const elBCR = this.offset( nativeEl );
     const offsetParentEl = this.parentOffsetEl(nativeEl);
-      
+
     if (offsetParentEl !== window.document) {
       offsetParentBCR = this.offset(offsetParentEl);
       offsetParentBCR.top += offsetParentEl.clientTop - offsetParentEl.scrollTop;
       offsetParentBCR.left += offsetParentEl.clientLeft - offsetParentEl.scrollLeft;
     }// If
 
-    console.log("HASTA AQUÍ HEMOS LLEGADO!");
     const boundingClientRect = nativeEl.getBoundingClientRect();
-    console.log("BOUNDING CLIENT RECT!");
 
     return {
       width: boundingClientRect.width || nativeEl.offsetWidth,
       height: boundingClientRect.height || nativeEl.offsetHeight,
       top: elBCR.top - offsetParentBCR.top,
       left: elBCR.left - offsetParentBCR.left
-    };//return 
+    }; // Return
 
   }// BodyPosition
 
@@ -281,27 +290,33 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    /**
      * @protected
      * @method
-     * @param nativeEl 
+     * @param nativeEl
      * @description
-     * 
+     *
      */
   protected parentOffsetEl(nativeEl: HTMLElement): any {
-      
-              let offsetParent: any = nativeEl.offsetParent || window.document;
-              while (offsetParent && offsetParent !== window.document && this.isStaticPositioned(offsetParent)) {
-                  offsetParent = offsetParent.offsetParent;
-              }// while
-              
-              return offsetParent || window.document;
-      
+
+    let offsetParent: any = nativeEl.offsetParent || window.document;
+    while (offsetParent && offsetParent !== window.document && this.isStaticPositioned(offsetParent)) {
+      offsetParent = offsetParent.offsetParent;
+    }// while
+
+    return offsetParent || window.document;
+
   }// parentOffsetEl
 
 
 
 
-
+  /**
+   * @method
+   * @protected
+   * @param nativeEl
+   * @param cssProp
+   * @description
+   */
   protected getStyle(nativeEl: HTMLElement, cssProp: string): string {
-    
+
     if ((nativeEl as any).currentStyle) // IE
         return (nativeEl as any).currentStyle[cssProp];
 
@@ -310,7 +325,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
 
     // finally try and get inline style
     return (nativeEl.style as any)[cssProp];
-  }
+  }// GetStyle
 
 
 
@@ -318,7 +333,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
   /**
      * @protected
      * @method
-     * @param nativeEl 
+     * @param nativeEl
      * @description
      */
   protected isStaticPositioned(nativeEl: HTMLElement): boolean {
@@ -328,18 +343,23 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
 
 
 
+
+
   /**
-   * @public 
+   * @public
    * @method
    * @description
    * Método que muestra el dropdown en pantalla
    */
   public show() {
-    if( !this.visible ) {
+
+    if ( !this.visible ) {
       this.reposition();
       this.visible = true;
+      this.changeDetector.markForCheck();
     }// If
-  }//show
+
+  }// Show
 
 
 
@@ -352,15 +372,19 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * Método que oculta el dropdown en la vista
    */
   public hide() {
-    if( this.visible ) {
-      
+    if ( this.visible ) {
+      console.log(" HIDE METHOD EXECUTE!");
       this.startHidden = true;
-      
+      this.changeDetector.markForCheck();
+
+
       setTimeout(() => {
+        console.log(" HIDE METHOD TIMEOUT EXECUTE!");
         this.visible = false;
         this.startHidden = false;
-      },(this.animate) ? 450 : 0 );//setTimeout
-    
+        this.changeDetector.markForCheck();
+      }, (this.animate) ? 450 : 0 );
+
     }// If
   }// Hide
 
@@ -378,7 +402,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
       this.show();
     } else {
       this.hide();
-    }//if
+    }// If
   }// Toggle
 
 
@@ -389,7 +413,7 @@ export class RawDropdownComponent implements AfterViewInit, OnDestroy {
    * @public
    * @method
    */
-  public set setTriggerDropdown(instance:IFCDropdownTriggerDirective){
+  public set setTriggerDropdown(instance: RawDropdownTriggerDirective){
     this.dropdownTrigger = instance;
   }// setTriggerDropdown
 

@@ -189,13 +189,14 @@ export class RawDropdownTriggerDirective implements OnInit, OnChanges {
    * @private
    * @method
    * @description
-   * Método encargado de balancear el 
-   * estado del componente dropdown, si 
+   * Método encargado de balancear el
+   * estado del componente dropdown, si
    * esta visible lo oculta y viceversa.
    */
   private toggle() {
-    if (!this.visible) { return this.show(); }// if
-    this.hide();
+    console.log('TOGGLE ' + this.visible );
+    if (this.visible) { return this.hide(); }// if
+    this.show();
   }// Toggle
 
 

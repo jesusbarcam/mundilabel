@@ -1,15 +1,17 @@
 
 <div #dropdownContainer 
-      class="ifc-dropdown {{ position }}" 
+      class="raw-dropdown {{ position }}" 
       [style.width]=" width + 'px'"
       [style.left]=" left + 'px'"
       [style.top]="top + 'px'" 
-      [ngClass]="{'animated':animate , 'fadeOutDown':startHidden , 'fadeInUp':visible , 'dark':dark}" 
-      [hidden]="!visible"
-      style="display:block" >
+      [class.animated]=" animate " 
+      [class.fadeOutDown]=" startHidden "
+      [class.fadeInUp]=" visible "
+      [class.dark]=" dark "
+      [hidden]="!visible" >
 
   <div class="arrow" 
-      [ngClass]="{'dark':dark}" 
+      [class.dark]=" dark " 
       [style.left]="arrowPosition + 'px' " >
   </div>
 

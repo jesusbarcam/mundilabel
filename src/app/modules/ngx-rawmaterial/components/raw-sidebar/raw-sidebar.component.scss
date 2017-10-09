@@ -1,0 +1,30 @@
+@import 'variables';
+
+$width-sidebar: 38% !default;
+$zIndex-sidebar: 1500 !default;
+
+
+:host {
+  position: fixed;
+  width: $width-sidebar;
+  height: 100vh;
+  padding:1rem;
+  top:0;
+  left:0;
+  background-color: $color-dark;
+  z-index: $zIndex-sidebar;
+
+  -webkit-box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.75);
+  box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.75);
+  
+}//host
+
+
+
+
+@media(max-width: $sm) {
+  :host {
+    width: 80% !important;
+  }// host
+}// mediaMaxWidth

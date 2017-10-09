@@ -1,15 +1,20 @@
+@import 'variables';
+
 
 $coorporativeColor: #043f60 !default;
 
 
-.ifc-dropdown{
+
+
+
+.raw-dropdown{
   position: fixed;
   width: auto;
   height: auto;
   margin-top:10px;
   //padding:2px;
-  color: $lightColor;
-  background-color: $lightColor;
+  color: $color-light;
+  background-color: $color-light;
   z-index:1024;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 3px;
@@ -25,7 +30,7 @@ $coorporativeColor: #043f60 !default;
   margin-top: -10px;
   border-style: solid;
   border-width: 0 10px 10px 10px;
-  border-color: transparent transparent $lightColor transparent;
+  border-color: transparent transparent $color-light transparent;
 }// arrow
 
 
@@ -36,8 +41,8 @@ $coorporativeColor: #043f60 !default;
 
 
 
-.ifc-dropdown.dark {
-  color:$lightColor;
+.raw-dropdown.dark {
+  color:$color-light;
   background-color: $coorporativeColor;
 }//ifc-dropdown.dark
 
@@ -45,17 +50,17 @@ $coorporativeColor: #043f60 !default;
 
 
 
-
-
-@include media-breakpoint-down(md) {
-  .ifc-dropdown {
+@media(max-width:$md) {
+  .raw-dropdown {
     //right: calc(25% - 76px) !important;
-  }//ifc-dropdown
-}//@include media-breakpoint-down
+  }// ifc-dropdown
+}//@media
 
 
-@include media-breakpoint-down(xs) {
-  .ifc-dropdown {
+
+
+@media(max-width:$xs) {
+  .raw-dropdown {
     //right: calc(25% - 76px) !important;
-  }//ifc-dropdown
-}//@include media-breakpoint-down
+  }// ifc-dropdown
+}//@media
