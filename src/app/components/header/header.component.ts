@@ -12,7 +12,7 @@ import { MundilabelSettingsService } from '../../commons/mundilabel.settings';
 })
 export class HeaderComponent implements OnInit {
 
-  private urlLogotype: string;
+  private logotypeImageURL: string;
   private topScroll: boolean;
 
 
@@ -22,7 +22,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.topScroll = false;
-    this.urlLogotype = this.mundilabelSettingsService.MUNDILABEL_LOGOTYPE_URL;
+    this.logotypeImageURL = this.mundilabelSettingsService.MUNDILABEL_LOGOTYPE_URL;
   }// NgOnInit
+
 
 }// HeaderComponent

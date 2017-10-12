@@ -10,12 +10,20 @@
     cursor: pointer;
   }//hover
 
-  h1 {
-    color: $color-light;
-    font-size: 2rem;
-    font-weight: 100;
-    margin-bottom:0 !important;
-  }//h1
+  .img-logotype {
+    width: 250px;
+    height: 65px; 
+
+    background-position: top;
+    background-attachment: unset;
+    background-repeat: no-repeat;
+  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }// img-logotype
+
 }//logotype
 
 
@@ -23,10 +31,6 @@
 /*
 Media query for dimension less of 450px of width */
 @media(max-width:$xl) {
-  .logotype {
-    h1 { font-size: 1.5rem !important;}//h1
-  }//logotype
-
 }// mediaXS
 
 

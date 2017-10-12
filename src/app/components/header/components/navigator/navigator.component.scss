@@ -8,7 +8,6 @@
 }//:host
 
 
-
 .navigator-wrapper {
   width: 100%;
   height: 100%;
@@ -17,7 +16,7 @@
 
   .item {
     @extend .font-widget;
-    color: $color-light;
+    color: $color-dark;
     border-radius: 3px;
     padding:0.2rem 2rem;
 
@@ -33,7 +32,6 @@
     }// activated
 
     
-
     &:not(.activated):hover {
       cursor: pointer;
       background-color: rgba($color-light,0.1);
@@ -51,7 +49,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  color: $color-light;
+  color: $color-dark;
 
   i {
     font-size: $fontSize-icon;
