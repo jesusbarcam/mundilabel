@@ -1,3 +1,74 @@
+
+
 <div class="footer-first-wrapper">
-  footer works!
+    <div class="container">
+
+      <div class="row vertical-center">
+
+        <div class="col">
+          <div class="logotype-wrapper">
+            <logotype></logotype>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row vertical-center info-wrapper">
+
+        <div class="col-6 col-lg-4 ">
+          <div class="address-info">
+            <span>{{ address }}</span>
+            <span>{{ town }} ({{ province }})</span>
+          </div>
+        </div>
+
+
+        <div class="col-6 col-lg-4">
+          <div class="address-info">
+            <span>{{ mail }}</span>
+            <span> Tlf: {{ phone }} - Fax: {{ fax }}</span>    
+          </div>
+        </div>
+
+          
+
+        <div class="col-12 col-lg-4">
+          <div class="social-media-wrapper">
+            
+            <a><i class="fa fa-facebook-official"></i></a>
+            <a><i class="fa fa-twitter"></i></a>
+            <a><i class="fa fa-instagram"></i></a>
+            <a><i class="fa fa-google-plus"></i></a>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="delimiter-line" ></div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="navigator-wrapper">
+              <navigator></navigator>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigator delimiter-line" ></div>
+
+      <div class="row">
+        <div class="col-12">
+
+          <div class="footer-copyright">
+            <p>{{ currentYear }}&copy; {{ 'APPLICATION_COMMON.FOOTER_COPYRIGHT' | translate }} {{ nameCompany }}</p>
+          </div>
+          
+        </div>
+      </div>
+
+
+    </div>
 </div>

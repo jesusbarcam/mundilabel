@@ -4,16 +4,20 @@
 
 
 :host{
+  width: 100%;
+  display:flex;
   background-color: none;
+  justify-content: space-around;
+  align-items: center;
 }//:host
 
 
 .navigator-wrapper {
-  width: 100%;
   height: 100%;
-  display:flex;
-  justify-content: flex-end;
-
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  
   .item {
     @extend .font-widget;
     color: $color-dark;

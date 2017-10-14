@@ -1,6 +1,7 @@
 {
   "APPLICATION_COMMON":{
-    "APPLICATION_NAME":"Mundilabel"
+    "APPLICATION_NAME":"Mundilabel",
+    "FOOTER_COPYRIGHT":"Todos los derechos reservados a "
   },
 
   "TITLES_BY_ROUTE":{

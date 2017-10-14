@@ -25,3 +25,10 @@
   font-size: $fontSize-detail;
   font-weight: $fontWeight-detail;
 }// Font-detail
+
+
+.light-shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba($color-dark,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba($color-dark,0.75);
+  box-shadow: 0px 0px 5px 0px rgba($color-dark,0.75);
+}
