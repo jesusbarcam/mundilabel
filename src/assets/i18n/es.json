@@ -13,8 +13,11 @@
   },
 
   "HOME": {
+    "QUALITY_LABEL":"Calidad",
     "QUALITY_SLOGAN": "Empleamos en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo",
+    "SERIOUSNESS_LABEL":"Seriedad",
     "SERIOUSNESS_SLOGAN": "Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento",
+    "SERVICE_LABEL":"Servicio",
     "SERVICE_SLOGAN": "Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado"
   },
 
