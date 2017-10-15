@@ -1,0 +1,58 @@
+
+@import 'variables';
+@import 'classes';
+
+
+
+.company-features-wrapper {
+  border-top:2px solid $color-coorporative-1;
+  padding:2rem 0.5rem;
+  background-color: $color-dark;
+
+  .feature {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: rgba($color-light,0.65);
+    }//span
+
+    i {
+      font-size: 6.5rem;
+      color: rgba($color-light,0.35);
+    }//i
+
+  }//feature
+
+}//company-features-wrapper
+
+
+
+
+.company-slogan-wrapper {
+  padding:5rem 1rem;
+  background-color: $color-light;
+
+  p {
+    text-align: center;
+    color: $color-dark;
+    font-size: $fontSize-title;
+    margin-bottom: 0 !important;
+
+    &.slogan {
+      color: rgba($color-dark,0.55);
+
+      i {
+        font-size: 3.5rem;
+      }//i
+
+    }//slogan
+
+  }//p
+}//company-slogan-wrapper
