@@ -13,6 +13,8 @@ export class MundilabelSettingsService {
   public readonly PROVINCE_COMPANY: string = 'Madrid';
 
   public readonly MUNDILABEL_LOGOTYPE_URL: string = '../../assets/images/mundilabel_logo.svg';
+  public readonly MUNDILABEL_HAND_HOME_IMAGE_URL: string = '../../assets/images/HandMundilabel.jpg';
+  public readonly MUNDILABEL_LABEL_IMAGE_URL: string = '../../assets/images/labelMundilabel.jpg';
   public readonly MUNDILABEL_WALLPAPERS: any = {
     home: '../../assets/images/wallpaper-home.jpg',
     about: '../../assets/images/wallpaper-about.jpg',

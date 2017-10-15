@@ -12,6 +12,13 @@
     "CONTACT":"Dispuestos a coperar, colaborar y ayudar"
   },
 
+  "HOME": {
+    "QUALITY_SLOGAN": "Empleamos en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo",
+    "SERIOUSNESS_SLOGAN": "Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento",
+    "SERVICE_SLOGAN": "Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado"
+  },
+  
+
   "ABOUT_US":{
     "HISTORY":"Mundilabel es una empresa especializada en la fabricacion de etiquetas adhesivas, llevando a cabo su labor desde 1995, dando soluciones tanto a particulares como a empresas y solventando las necesidades que requieren nuestros clientes",
     "TARGETS":"Solventar las necesidades que requieren nuestros clientes de una forma óptima y rentable, teniendo en cuenta desde un primer momento, que la seriedad y el buen servicio hacia ustedes, es nuestro activo más importante con lo cual los principales objetivos de Mundilabel S.A.L. son calidad, seriedad y servicio.",

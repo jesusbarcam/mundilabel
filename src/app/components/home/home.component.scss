@@ -2,26 +2,48 @@
 @import 'variables';
 @import 'classes';
 
+$color-titles: rgba($color-dark,0.55) !default;
+
+
+.flip-icons {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
+}//flip-icons
+
 
 
 .company-features-wrapper {
-  border-top:2px solid $color-coorporative-1;
+  border-top:4px solid $color-coorporative-1;
   padding:2rem 0.5rem;
   background-color: $color-dark;
 
   .feature {
-    height: 10rem;
+    height: 15rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    color: rgba($color-light,0.65) !important;
 
     span {
       text-align: center;
       font-size: 1.8rem;
       font-weight: bold;
-      color: rgba($color-light,0.65);
+      
     }//span
+
+    p {
+      margin-top:0.5rem;
+      opacity: 0.75;
+      text-align: center;
+      font-size: $fontSize-paragraph;
+      margin-bottom: 0 !important;
+    }//p
 
     i {
       font-size: 6.5rem;
@@ -41,18 +63,89 @@
 
   p {
     text-align: center;
-    color: $color-dark;
-    font-size: $fontSize-title;
     margin-bottom: 0 !important;
+    color: $color-titles !important;
+
+    span {
+      font-size: $fontSize-title;
+    }//span
 
     &.slogan {
-      color: rgba($color-dark,0.55);
 
       i {
         font-size: 3.5rem;
+
+        &.flip-icon {
+          @extend .flip-icons;
+        }//flip-icon
+
       }//i
 
     }//slogan
 
   }//p
 }//company-slogan-wrapper
+
+
+
+.box-contact-info {
+  padding:2rem 0;
+  color: rgba($color-dark,0.55) !important;
+  background-color: rgba($color-dark,0.2);
+
+  &.last-box {
+    background-color: darken($color-coorporative-2,4);
+  }//last-box
+
+  h1 {
+    text-align: center;
+    font-size: $fontSize-widget + 0.3rem !important;
+    margin-bottom:none;
+   
+    span {
+      font-size: $fontSize-widget + 0.3rem !important;
+      font-weight: bold;
+    }
+  }//h1
+}//box-contact-info
+
+
+
+.background-image {
+  width: 100%;
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}//background-image
+
+
+
+
+.box-how-we-work {
+  border-top:4px solid $color-coorporative-1;
+  padding:3rem 0;
+
+  h1 {
+    color:$color-titles;
+    text-align: center;
+    font-size: $fontSize-title;
+
+    i {
+      font-size:3rem;
+      &.flip-icon {
+        @extend .flip-icons;
+      }//flip-icon
+    }//i
+
+  }//h1
+  
+}//box-how-we-work
+
+
+.box-last-info {
+  width: 100%;
+  height: 15rem;
+
+  
+}//box-last-info

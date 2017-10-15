@@ -6,36 +6,47 @@
         
     <div class="row">
       
-      <div class="col-sm-6 col-md-3">
+      <div class="col-12 col-md-4">
+        <div class="feature">
+          <i class="material-icons">local_play</i>
+          <span>Calidad</span>
+          <p>{{ 'HOME.QUALITY_SLOGAN' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
         <div class="feature">
           <i class="material-icons">new_releases</i>
-          <span>Innovadores</span>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3">
-        <div class="feature">
-          <i class="material-icons">local_florist</i>
-          <span>Comprometidos</span>
-        </div>
-      </div>
-      
-      <div class="col-sm-6 col-md-3">
-        <div class="feature">
-          <i class="material-icons">timelapse</i>
-          <span>Resolutivos</span>
+          <span>Seriedad</span>
+          <p>{{ 'HOME.SERIOUSNESS_SLOGAN' | translate }}</p>
         </div>
       </div>
 
 
-      <div class="col-sm-6 col-md-3">
+      <div class="col-12 col-md-4">
           <div class="feature">
             <i class="material-icons">event_available</i>
-            <span>Puntuales</span>
+            <span>Servicio</span>
+            <p>{{ 'HOME.SERVICE_SLOGAN' | translate }}</p>
           </div>
         </div>
 
 
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="box-contact-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        
+        <h1>Si necesitas nuestra ayuda, no dudes en comunicarte con nosotros en el <span>{{ phone }}</span></h1>
+
+      </div>
     </div>
   </div>
 </div>
@@ -50,14 +61,16 @@
       <div class="row">
         <div class="col-12">
                 
-          <p class="slogan">{{ 'APPLICATION_COMMON.SLOGAN' | translate }}<i class="material-icons">format_quote</i></p>
+        <p class="slogan">
+          <i class="material-icons flip-icon">format_quote</i>
+          <span>{{ 'APPLICATION_COMMON.SLOGAN' | translate }}</span>
+          <i class="material-icons">format_quote</i>
+        </p>
           
-        </div>
       </div>
     </div>
   </div>
-
-
+</div>
 
 
 
@@ -82,14 +95,49 @@
 
   <div class="row">
     <div class="col-12">
-      <p>
-        Antes de concentrarse con su equipo para la disputa del partido frente a Las Palmas, 
-        Gerard Piqué depositó su voto en una escuela de Sant Just Desvern habilitada para tal efecto. 
-        El defensa del Barcelona siempre ha sido un defensor del derecho a decidir sobre la independencia de Cataluña 
-        y no perdió la oportunidad de participar en el referéndum.El futbolista también habló sobre 
-        los hechos que se han producido a lo largo de la mañana en Barcelona: "Esto es una vergüenza, 
-        las imágenes hablan por sí solas".
-      </p>
+      <div class="box-info">
+        <p>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="background-image" [style.background-image]=" 'url(' + labelImageUrl + ')' "></div>
+
+
+
+
+
+<div class="box-how-we-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        
+        <h1>
+          <i class="material-icons flip-icon">format_quote</i>
+          {{ 'TITLES_BY_ROUTE.HOWWEWORK' | translate }}
+          <i class="material-icons">format_quote</i>
+        </h1>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="box-contact-info last-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <h1>También puedes comunicarte con nosotros por correo electronico, <span>{{ mail }}</span></h1>
+      </div>
     </div>
   </div>
 </div>
