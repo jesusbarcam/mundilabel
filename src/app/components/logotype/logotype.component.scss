@@ -32,10 +32,14 @@ $maxHeightLogotype: 2.8rem;
 
 
 
-/*
-Media query for dimension less of 450px of width */
-@media(max-width:$xl) {
-}// mediaXS
+
+
+@media(max-width:$sm) {
+  .logotype {
+    width: $maxWidthLogotype - 3.5rem;
+    height: $maxHeightLogotype - 0.3rem;
+  }//logotype
+}// mediaSM
 
 
 

@@ -52,3 +52,18 @@ $distance-between-blocks: 3rem;
 }//title-line
 
 
+
+
+@media (max-width:$sm) {
+
+  .section-title {
+    font-size: $fontSize-title - 0.5rem !important;
+  }//section-title
+  
+  .section-subtitle {
+    font-size: $fontSize-subtitle - 0.5rem !important;
+  }//section-subtitle
+
+}//mediaSM
+
+

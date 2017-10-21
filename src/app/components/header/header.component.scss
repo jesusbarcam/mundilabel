@@ -1,9 +1,5 @@
 @import 'variables';
 
-:host {
-  
-}// Host
-
 
 .header {
   width: 100%;
@@ -34,6 +30,15 @@
   }//top-scroll
 
 }//header
+
+
+
+
+@media(max-width:$sm) {
+  .header{
+    height: 3rem;
+  }//header
+}//mediaSM
 
 
 
