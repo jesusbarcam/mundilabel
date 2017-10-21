@@ -2,7 +2,9 @@
   "APPLICATION_COMMON":{
     "APPLICATION_NAME":"Mundilabel",
     "SLOGAN":"No solo queremos ser proveedores, también queremos ser colaboradores",
-    "FOOTER_COPYRIGHT":"Todos los derechos reservados a "
+    "FOOTER_COPYRIGHT":"Todos los derechos reservados a ",
+    "OURS_HELP":"Si necesitas nuestra ayuda, no dudes en comunicarte con nosotros en el ",
+    "MAIL_CONNECTION":"También puedes comunicarte con nosotros por correo electronico,"
   },
 
   "TITLES_BY_ROUTE":{
@@ -18,12 +20,13 @@
     "SERIOUSNESS_LABEL":"Seriedad",
     "SERIOUSNESS_SLOGAN": "Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento",
     "SERVICE_LABEL":"Servicio",
-    "SERVICE_SLOGAN": "Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado"
+    "SERVICE_SLOGAN": "Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado",
+    "OURS_CLIENTS":"Nuestros mas famosos clientes"
   },
 
 
   "ABOUT_US":{
-    "HISTORY":"Mundilabel es una empresa especializada en la fabricacion de etiquetas adhesivas, llevando a cabo su labor desde 1995, dando soluciones tanto a particulares como a empresas y solventando las necesidades que requieren nuestros clientes",
+    "HISTORY":"Mundilabel es una empresa especializada en la fabricacion de etiquetas adhesivas, llevando a cabo su labor desde 1995, dando soluciones tanto a particulares como a empresas y solventando las necesidades que requieren nuestros clientes.",
     "TARGETS":"Solventar las necesidades que requieren nuestros clientes de una forma óptima y rentable, teniendo en cuenta desde un primer momento, que la seriedad y el buen servicio hacia ustedes, es nuestro activo más importante con lo cual los principales objetivos de Mundilabel S.A.L. son calidad, seriedad y servicio.",
     "WORK_METHODS":"Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado. Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento, ayudando y cooperando en todo lo que este en nuestra mano…",
     "COMPANY_POLITICS":"Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento, ayudando y cooperando en todo lo que este en nuestra mano… No queremos ser solo proveedores, queremos ser colaboradores",

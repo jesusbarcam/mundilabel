@@ -3,16 +3,18 @@
 @import 'classes';
 
 $color-titles: rgba($color-dark,0.55) !default;
+$distance-between-blocks: 3rem !default;
 
 
-.flip-icons {
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-  -ms-filter: fliph; /*IE*/
-  filter: fliph; /*IE*/
-}//flip-icons
+
+
+.text-content-decorate {
+  text-align: justify;
+  font-size: $fontSize-paragraph + 0.3rem;
+  color: rgba( $color-dark, 0.6);
+}//text-content-decorate
+
+
 
 
 
@@ -57,6 +59,7 @@ $color-titles: rgba($color-dark,0.55) !default;
 
 
 
+
 .company-slogan-wrapper {
   padding:5rem 1rem;
   background-color: $color-light;
@@ -64,27 +67,27 @@ $color-titles: rgba($color-dark,0.55) !default;
   p {
     text-align: center;
     margin-bottom: 0 !important;
-    color: $color-titles !important;
-
-    span {
-      font-size: $fontSize-title;
-    }//span
-
-    &.slogan {
-
-      i {
-        font-size: 3.5rem;
-
-        &.flip-icon {
-          @extend .flip-icons;
-        }//flip-icon
-
-      }//i
-
-    }//slogan
-
   }//p
+
 }//company-slogan-wrapper
+
+
+
+
+p.slogan {
+  color: $color-titles !important;
+  text-align: left !important;
+  font-size: $fontSize-title;
+}//slogan
+
+
+
+.slogan-line {
+  width:15%;
+  margin-top:1rem;
+  border-top:14px solid rgba($color-coorporative-1,0.7);
+}//slogan-line
+
 
 
 
@@ -111,31 +114,49 @@ $color-titles: rgba($color-dark,0.55) !default;
 
 
 
+
+
 .background-image {
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: scroll;
 }//background-image
 
 
 
 
+
+
+p.text-content {
+  @extend .text-content-decorate;
+  margin-bottom: 0;
+
+  
+  &.one {
+    margin-top: $distance-between-blocks;
+  }//one
+  &.two {
+    margin-bottom: $distance-between-blocks;
+  }//two
+  
+}//text-content
+
+
+
 .box-how-we-work {
   border-top:4px solid $color-coorporative-1;
-  padding:3rem 0;
+  padding:$distance-between-blocks 0;
 
   h1 {
     color:$color-titles;
-    text-align: center;
+    text-align: left;
     font-size: $fontSize-title;
 
     i {
       font-size:3rem;
-      &.flip-icon {
-        @extend .flip-icons;
-      }//flip-icon
     }//i
 
   }//h1
@@ -143,9 +164,41 @@ $color-titles: rgba($color-dark,0.55) !default;
 }//box-how-we-work
 
 
+
+
+.clients-logos-wrapper {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: $distance-between-blocks;
+  justify-content: space-between;
+  
+  div.our-client-logo {
+    height: 100%;
+    width: 100%;  
+    margin:2rem 1rem !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.45;
+  }//ours-client-logo
+  
+}// clients-logos-wrapper
+
+
+
+
+
 .box-last-info {
   width: 100%;
   height: 15rem;
-
-  
 }//box-last-info
+
+
+
+
+
+@media (max-width:$sm) {
+  p.slogan {
+    font-size: $fontSize-title - 1rem;
+  }//slogan
+}// mediaSM

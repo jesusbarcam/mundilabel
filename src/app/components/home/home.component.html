@@ -44,29 +44,8 @@
     <div class="row">
       <div class="col-12">
         
-        <h1>Si necesitas nuestra ayuda, no dudes en comunicarte con nosotros en el <span>{{ phone }}</span></h1>
+        <h1>{{ 'APPLICATION_COMMON.OURS_HELP' | translate }} <span>{{ phone }}</span></h1>
 
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div class="company-slogan-wrapper">
-    <div class="container">
-          
-      <div class="row">
-        <div class="col-12">
-                
-        <p class="slogan">
-          <i class="material-icons flip-icon">format_quote</i>
-          <span>{{ 'APPLICATION_COMMON.SLOGAN' | translate }}</span>
-          <i class="material-icons">format_quote</i>
-        </p>
-          
       </div>
     </div>
   </div>
@@ -77,28 +56,29 @@
 
 
 <div class="container">
-
-  <div class="row">
-    <div class="col">
-      <div class="box-features">
-        
-        <div class="box">
-
-        </div>
-
-
-      </div>
-    </div>
-    
-  </div>
-
-
   <div class="row">
     <div class="col-12">
-      <div class="box-info">
-        <p>
+      <p class="text-content one">
+        {{ 'ABOUT_US.HISTORY' | translate }}
+        {{ 'ABOUT_US.MUNDILABEL_TEAM' | translate }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="company-slogan-wrapper">
+    <div class="container">
           
+      <div class="row">
+        <div class="col-12">
+               
+        <p class="slogan">
+          {{ 'APPLICATION_COMMON.SLOGAN' | translate }}
         </p>
+        <div class="slogan-line"></div>
+
       </div>
     </div>
   </div>
@@ -106,9 +86,21 @@
 
 
 
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-content two">
+          {{ 'ABOUT_US.WAY_OF_WORKING' | translate }}
+          {{ 'ABOUT_US.WORK_METHODS' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <div class="background-image" [style.background-image]=" 'url(' + labelImageUrl + ')' "></div>
-
-
 
 
 
@@ -117,16 +109,71 @@
     <div class="row">
       <div class="col-12">
         
-        <h1>
-          <i class="material-icons flip-icon">format_quote</i>
+        <p class="slogan">
           {{ 'TITLES_BY_ROUTE.HOWWEWORK' | translate }}
-          <i class="material-icons">format_quote</i>
-        </h1>
+        </p>
+        <div class="slogan-line"></div>
         
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+<div class="box-ours-clients">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <p class="text-content-decorate">{{ 'HOME.OURS_CLIENTS' | translate }}:</p>
+      </div>  
+    </div>
+
+
+
+    <div class="row clients-logos-wrapper">
+
+      <div class="col-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="our-client-logo" [style.background-image]=" 'url(' + wurthClientLogoUrl + ')' "></div>    
+      </div>
+
+      <div class="col-3 col-md-3 col-lg-2 col-xl-1">
+          <div class="our-client-logo" [style.background-image]=" 'url(' + ifemaClientLogoUrl + ')' "></div>    
+        </div>
+
+      <div class="col-3 col-md-3 col-lg-2 col-xl-1">
+        <div class="our-client-logo" [style.background-image]=" 'url(' + upsClientLogoUrl + ')' "></div>    
+      </div>
+
+      <div class="col-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="our-client-logo" [style.background-image]=" 'url(' + lorealClientLogoUrl + ')' "></div>    
+      </div>
+      
+      
+
+      
+
+      
+
+      <div class="col-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="our-client-logo" [style.background-image]=" 'url(' + seurClientLogoUrl + ')' "></div>    
+      </div>
+
+
+      
+
+
+    </div>
+
+
+
+
+  </div>
+</div>
+
 
 
 
@@ -136,7 +183,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-          <h1>También puedes comunicarte con nosotros por correo electronico, <span>{{ mail }}</span></h1>
+          <h1>{{ 'APPLICATION_COMMON.MAIL_CONNECTION' | translate }} <span>{{ mail }}</span></h1>
       </div>
     </div>
   </div>
