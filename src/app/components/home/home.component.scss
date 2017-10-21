@@ -195,8 +195,17 @@ p.text-content {
 
 
 
+@media(max-width:$lg) and (min-width:$md) {
+  .company-features-wrapper {
+    .feature {
+      height: 20rem;
+    }//feature
+  }//company-features-wrapper
+}//mediaMD
 
-@media (max-width:$sm) {
+
+
+@media(max-width:$sm) {
   p.slogan {
     font-size: $fontSize-title - 1rem;
   }//slogan
