@@ -32,6 +32,7 @@ export class NavigatorComponent implements OnInit {
 
       if ( data && data.url ) {
         this.currentUrl = data.url.replace('/', '' );
+        this.currentUrl = ( this.currentUrl === '')? MundilabelRoutes[1].path : this.currentUrl;
         this.mundilabelService.activateRoute( this.currentUrl );
         this.changeDetection.markForCheck();
       }// If
