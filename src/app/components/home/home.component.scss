@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'classes';
 
-$color-titles: rgba($color-dark,0.55) !default;
+$color-titles: rgba($color-dark,0.85) !default;
 $distance-between-blocks: 3rem !default;
 
 
@@ -10,7 +10,7 @@ $distance-between-blocks: 3rem !default;
 
 .text-content-decorate {
   text-align: justify;
-  font-size: $fontSize-paragraph + 0.3rem;
+  font-size: $fontSize-paragraph;
   color: rgba( $color-dark, 0.6);
 }//text-content-decorate
 
@@ -78,14 +78,13 @@ p.slogan {
   color: $color-titles !important;
   text-align: left !important;
   font-size: $fontSize-title;
+  font-weight: $fontWeight-subtitle;
 }//slogan
 
 
 
 .slogan-line {
-  width:15%;
-  margin-top:1rem;
-  border-top:14px solid rgba($color-coorporative-1,0.7);
+  @extend .title-line;
 }//slogan-line
 
 

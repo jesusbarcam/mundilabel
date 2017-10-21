@@ -9,7 +9,6 @@ import { MundilabelComponent } from './mundilabel.component';
 import { UnknowPageComponent } from './components/unknow-page/unknow-page.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -37,7 +36,6 @@ export function translateLoader(http: Http) {
     UnknowPageComponent,
     HomeComponent,
     AboutUsComponent,
-    HowWeWorkComponent,
     ContactComponent,
     FooterComponent,
     HeaderComponent,

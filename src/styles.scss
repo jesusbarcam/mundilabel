@@ -20,6 +20,9 @@ body,
   @extend .font-paragraph;
 }// Html, Body
 
+b {
+  font-weight: 900 !important;
+}
 
 .center-text-align {
   text-align: center;

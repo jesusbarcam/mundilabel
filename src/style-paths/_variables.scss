@@ -4,14 +4,16 @@ $familyFont: 'Montserrat',sans-serif;
 
 $fontSize-detail: 0.75rem;
 $fontSize-widget: 1rem;
-$fontSize-paragraph: 0.88rem;
-$fontSize-title: 3.5rem;
+$fontSize-paragraph: 0.95rem;
+$fontSize-title: 2.8rem;
+$fontSize-subtitle: 2rem;
 $fontSize-icon: 1.65rem;
 
 $fontWeight-detail: 300;
 $fontWeight-widget: 400;
 $fontWeight-paragraph: 300;
 $fontWeight-title: 900;
+$fontWeight-subtitle: 200;
 
 
 // Media queries for responsive design 
@@ -30,3 +32,4 @@ $color-coorporative-2: #E3E8F0;
 $color-selection:#F30707;
 $color-light:#FFFFFF;
 $color-dark:#292F38;
+$color-underline: rgba($color-coorporative-1,0.35);

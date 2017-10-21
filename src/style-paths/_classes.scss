@@ -8,11 +8,20 @@
   font-weight: $fontWeight-title;
 }// Font-title
 
+
+.font-subtitle {
+  font-family: $familyFont;
+  font-size: $fontSize-subtitle;
+  font-weight: $fontWeight-subtitle;
+}// Font-title
+
+
 .font-widget {
   font-family: $familyFont;
   font-size: $fontSize-widget;
   font-weight: $fontWeight-widget;
 }
+
 
 .font-paragraph {
   font-family: $familyFont;
@@ -20,11 +29,19 @@
   font-weight: $fontWeight-paragraph;
 }// Font-paragraph
 
+
 .font-detail {
   font-family: $familyFont;
   font-size: $fontSize-detail;
   font-weight: $fontWeight-detail;
 }// Font-detail
+
+
+.title-line {
+  width: 8%;
+  border-top:14px solid $color-underline;
+}//title-line
+
 
 
 .light-shadow {

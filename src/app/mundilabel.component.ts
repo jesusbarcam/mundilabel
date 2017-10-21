@@ -17,8 +17,8 @@ export class MundilabelComponent {
    */
   constructor(translate: TranslateService) {
     // Configure translate module to idiomatization of app
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.setDefaultLang('es');
+    translate.use('es');
 
   }// Constructor
 

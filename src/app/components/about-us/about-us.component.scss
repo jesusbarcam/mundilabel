@@ -1,0 +1,54 @@
+
+@import 'variables';
+@import 'classes';
+
+// variables
+$color-text: rgba($color-dark,0.85);
+$distance-between-blocks: 3rem;
+
+
+
+.section-title {
+  @extend .font-title;
+  font-size: $fontSize-title + 1rem;
+  background-color: $color-underline;
+  padding:0.5rem;
+}//section-title
+
+
+.section-subtitle {
+  @extend .font-subtitle;
+  margin-bottom:1rem;
+  color: $color-text;
+  opacity:0.5;
+}//section-subtitle
+
+
+.section-text {
+  @extend .font-paragraph;
+  color: $color-text;
+}//section-text
+
+
+
+.container {
+  margin-top: $distance-between-blocks;
+  margin-bottom: $distance-between-blocks;
+}//container
+
+
+
+.title-text {
+  font-size: $fontSize-subtitle;
+  font-weight: $fontWeight-subtitle;
+  color: $color-text;
+  margin-top: $distance-between-blocks;
+}//h1
+
+
+.title-line {
+  @extend .title-line;
+  margin-bottom: $distance-between-blocks;
+}//title-line
+
+

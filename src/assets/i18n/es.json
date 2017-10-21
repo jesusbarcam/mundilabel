@@ -7,12 +7,23 @@
     "MAIL_CONNECTION":"También puedes comunicarte con nosotros por correo electronico,"
   },
 
+
+  "NAVIGATION_ROUTE":{
+    "HOME":"Inicio",
+    "ABOUT_US":"Quienes Somos",
+    "HOW_WE_WORK":"Como Trabajamos",
+    "LOCATION":"Donde estamos",
+    "CONTACT":"Habla con nosotros"
+  },
+
+
   "TITLES_BY_ROUTE":{
     "ABOUT":"No solo somos proveedores, también somos colaboradores",
     "HOWWEWORK":"Utilizamos los materiales mas inovadores del mercado",
     "LOCATION":"Siempre estamos cerca, atentos y preparados",
     "CONTACT":"Dispuestos a coperar, colaborar y ayudar"
   },
+
 
   "HOME": {
     "QUALITY_LABEL":"Calidad",
@@ -24,20 +35,23 @@
     "OURS_CLIENTS":"Nuestros mas famosos clientes"
   },
 
+
   "ABOUT_US" : {
+    "SECTION_SUBTITLE":"Desde 1995 trabajando por nuestros clientes",
     "HISTORY":"Mundilabel es una empresa especializada en la fabricacion de etiquetas adhesivas, llevando a cabo su labor desde 1995, dando soluciones tanto a particulares como a empresas y solventando las necesidades que requieren nuestros clientes.",
-    "TARGETS":"Solventar las necesidades que requieren nuestros clientes de una forma óptima y rentable, teniendo en cuenta desde un primer momento, que la seriedad y el buen servicio hacia ustedes, es nuestro activo más importante con lo cual los principales objetivos de Mundilabel S.A.L. son calidad, seriedad y servicio.",
+    "TARGETS":"Solventar las necesidades que requieren nuestros clientes de una forma óptima y rentable, teniendo en cuenta desde un primer momento, que la seriedad y el buen servicio hacia ustedes, es nuestro activo más importante con lo cual <b>los principales objetivos de Mundilabel S.A.L. son calidad, seriedad y servicio</b>.",
     "WORK_METHODS":"Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado. Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento, ayudando y cooperando en todo lo que este en nuestra mano…",
     "COMPANY_POLITICS":"Nuestro estilo funcional es la estricta y veraz comprensión al cliente intentando siempre solventar sus necesidades en todo momento, ayudando y cooperando en todo lo que este en nuestra mano… No queremos ser solo proveedores, queremos ser colaboradores.",
     "OUR_PRODUCTS":"Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente, dando una solución óptima y rentable en cada servicio contratado.",
     "MUNDILABEL_TEAM":"Disponemos de un gran grupo humano del cual ustedes tendrán un trato personalizado aportando nuestra experiencia desde el momento en que tengamos el primer contacto hasta que reciban el producto ya acabado.",
-    "WAY_OF_WORKING":"Mundilabel gestiona, desarrolla y enriqueze su sistema de control de calidad mejorando continuamente su eficacia de acuerdo con las condiciones de las normas vigentes, y dándole siempre una innegable importancia al esfuerzo por satisfacer los requisitos de nuestros clientes. En el deseo de merecer su confianza, esperamos iniciar una temprana colaboración, quedando a su entera disposición para cuantas consultas consideren oportunas"
+    "WAY_OF_WORKING":"Mundilabel gestiona, desarrolla y enriqueze su sistema de control de calidad mejorando continuamente su eficacia de acuerdo con las condiciones de las normas vigentes, y dándole siempre una innegable importancia al esfuerzo por satisfacer los requisitos de nuestros clientes. En el deseo de merecer su confianza, esperamos iniciar una temprana colaboración, quedando a su entera disposición para cuantas consultas consideren oportunas.",
+    "AT_PRODUCTION":"Mundilabel S.A.L. en el apartado de producción tenemos la posibilidad de realizar trabajos para una amplia gama de sectores, empleando en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo. Nuestra elaboración con primeras compañias en los distintos sectores industriales a nivel nacional, es nuestro mejor aval, manteniendo relación comercial en la actualidad con las empresas punteras del sector Cosmético, del sector Vinícola, del sector Farmacéutico, sector Alimenticio y por ultimo los sectores de Marketing Promocional, sector de Paqueteria y Mensajeria; pero no podemos olvidarnos tambien de todas las pequeñas y medianas empresas con las que trabajamos que son el pulmon del dia a dia tanto para nosotros como para la economia nacional.",
+    "KINDS_OF_PRODUCTION":"En Mundilabel fabricamos todo tipo de productos, para muy diferenciados sectores, una pequeña muestra de esos productos son: <b>Etiquetas de Seguridad, Etiquetas Térmicas y de transferencia Térmica, Etiquetas en Polietileno y Polipropileno, Etiquetas en doble soporte, Etiquetas en continuo, etc... </b>Esperamos que con nuestro esfuerzo y con nuestro trabajo el producto realizado sea la solución eficaz y mas rentable a las necesidades de comunicación y producción gráfica de nuestros clientes.",
+    "WAY_OF_PRODUCTION":"En Mundilabel trabajamos para dar el mejor producto al menor coste, empleando en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo, Mundilabel gestiona, desarrolla y enriqueze su sistema de control de calidad mejorando continuamente su eficacia de acuerdo con las condiciones de las normas vigentes, y dándole siempre una innegable importancia al esfuerzo por satisfacer los requisitos de nuestros clientes.", 
+    "TITLE_1":"Disponemos de un gran grupo humano del cual ustedes tendrán un trato personalizado",
+    "TITLE_2":"Nuestros productos se fabrican según las necesidades y requerimientos de cada cliente"
   },
-  "HOW_WE_WORK":{
-    "AT_PRODUCTION":"Mundilabel S.A.L. en el apartado de producción tenemos la posibilidad de realizar trabajos para una amplia gama de sectores, empleando en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo. Nuestra elaboración con primeras compañias en los distintos sectores industriales a nivel nacional, es nuestro mejor aval, manteniendo relación comercial en la actualidad con las empresas punteras del sector Cosmético, del sector Vinícola, del sector Farmacéutico, sector Alimenticio y por ultimo los sectores de Marketing Promocional, sector de Paqueteria y Mensajeria; pero no podemos olvidarnos tambien de todas las pequeñas y medianas empresas con las que trabajamos que son el pulmon del dia a dia tanto para nosotros como para la economia nacional",
-    "KINDS_OF_PRODUCTION":"En Mundilabel fabricamos todo tipo de productos, para muy diferenciados sectores, una pequeña muestra de esos productos son: Etiquetas de Seguridad, Etiquetas Térmicas y de transferencia Térmica, Etiquetas en Polietileno y Polipropileno, Etiquetas en doble soporte, Etiquetas en continuo, etc... Esperamos que con nuestro esfuerzo y con nuestro trabajo el producto realizado sea la solución eficaz y mas rentable a las necesidades de comunicación y producción gráfica de nuestros clientes",
-    "WAY_OF_PRODUCTION":"En Mundilabel trabajamos para dar el mejor producto al menor coste, empleando en cada producto los materiales necesarios y más innovadores para su posterior elaboración teniendo en cuenta la aplicación final del mismo, Mundilabel gestiona, desarrolla y enriqueze su sistema de control de calidad mejorando continuamente su eficacia de acuerdo con las condiciones de las normas vigentes, y dándole siempre una innegable importancia al esfuerzo por satisfacer los requisitos de nuestros clientes"
-  },
+
 
 
   "LOCATION":{
