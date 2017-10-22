@@ -11,6 +11,8 @@ export class MundilabelSettingsService {
   public readonly FAX_COMPANY: string = '91 656 17 44';
   public readonly TOWN_COMPANY: string = 'San Fernando de Henares';
   public readonly PROVINCE_COMPANY: string = 'Madrid';
+  public readonly LATITUDE_COMPANY: Number = 40.4542002;
+  public readonly LONGITUDE_COMPANY: Number = -3.4918238999999858;
 
 
 

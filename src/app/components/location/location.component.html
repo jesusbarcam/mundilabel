@@ -10,7 +10,7 @@
   </div>
 
 
-  <div class="row">
+  <div class="row info">
     <div class="col-12">
 
       <p class="text-info">
@@ -19,5 +19,43 @@
 
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <div class="google-map-wrapper">
+        <agm-map class="google-map" [zoom]=" zoom " [latitude]=" latitude " [longitude]=" longitude ">
+          <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        </agm-map>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="row">
+              
+    <div class="col-12 col-md-6 col-lg-4 ">          
+      <div class="address-info">
+        <span>{{ address }}</span>
+        <span>{{ town }} ({{ province }})</span>
+      </div>
+    </div>
+      
+      
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="address-info">
+        <span>{{ mail }}</span>
+        <span> Tlf: {{ phone }} - Fax: {{ fax }}</span>    
+      </div>
+    </div>
+  </div>
+
+
+  <div class="info-contact-wrapper">
+    <h1>{{ 'LOCATION.INFO_CONTACT_PHONE' | translate }} <span>{{ phone }}</span> {{ 'LOCATION.INFO_CONTACT_MAIL' | translate }} <span>{{ mail }}</span> </h1>
+  </div>
+
+
 
 </div>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Http } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 import { TranslateModule, TranslateLoader, TranslateService, TranslateStaticLoader } from 'ng2-translate';
 import { RawMaterialModule } from './modules/ngx-rawmaterial/rawmaterial.modules';
 
@@ -52,7 +53,8 @@ export function translateLoader(http: Http) {
     BrowserModule,
     MundilabelRouting,
     RawMaterialModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyDx3w26l9vnQT6AFHNCUP9VQcuWTwwvSMk' })
   ],
 
   providers: [

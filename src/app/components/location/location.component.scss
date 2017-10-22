@@ -1,6 +1,59 @@
 @import 'variables';
+@import 'classes';
 
+.info {
+  margin-top: 0.5rem;
+}//info
 
 .text-info {
   color: $color-text;
 }//text-info
+
+.google-map-wrapper {
+  margin-top: $distance-between-blocks !important;
+  margin-bottom: $distance-between-blocks;
+
+  .google-map {    
+    width:100%;
+    height: 30rem;
+  }//google-map
+
+}//google-map-wrapper
+
+
+
+
+.info-contact-wrapper {
+  margin-top: $distance-between-blocks;
+
+  h1 {
+    @extend .font-subtitle;
+    color: $color-text;
+    
+    span {
+      @extend .font-subtitle;
+      background-color: $color-underline;
+      padding:0.12rem 1rem;
+    }//span
+  }//h1
+
+}//info-contact-wrapper
+
+
+
+
+
+@media (min-width:$xs) {
+  .info-contact-wrapper {
+    margin-top: $distance-between-blocks;
+  
+    h1 {
+      font-size: 1.5rem;
+    
+      span {
+        font-size: 1.5rem;
+      }//span
+    }//h1
+  
+  }//info-contact-wrapper
+}

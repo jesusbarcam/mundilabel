@@ -207,7 +207,13 @@ p.text-content {
 
 
 @media(max-width:$sm) {
+  
   p.slogan {
     font-size: $fontSize-title - 1rem;
   }//slogan
+
+  .background-image {
+    height: 20rem;
+  }//background-image
+
 }// mediaSM
