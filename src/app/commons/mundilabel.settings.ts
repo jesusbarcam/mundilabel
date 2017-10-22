@@ -17,6 +17,7 @@ export class MundilabelSettingsService {
   public readonly MUNDILABEL_LOGOTYPE_URL: string = '../../assets/images/mundilabel_logo.svg';
   public readonly MUNDILABEL_HAND_HOME_IMAGE_URL: string = '../../assets/images/HandMundilabel.jpg';
   public readonly MUNDILABEL_LABEL_IMAGE_URL: string = '../../assets/images/labelMundilabel.jpg';
+  public readonly MUNDILABEL_PACKAGES_URL: string = '../../assets/images/packagesMundilabel.jpg';
 
   public readonly MUNDILABEL_WALLPAPERS: any = {
     home: '../../assets/images/wallpaper-home.jpg',

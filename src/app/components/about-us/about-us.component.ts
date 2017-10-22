@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
+import { MundilabelSettingsService  } from '../../commons';
+
 
 @Component({
   selector: 'about-us',
@@ -10,9 +12,17 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 export class AboutUsComponent implements OnInit {
 
-  constructor() {}
+  private packagesImageUrl: string;
+
+
+
+  constructor(private mundilabelSettings: MundilabelSettingsService) {
+  }// Constructor
+
 
   ngOnInit() {
+    this.packagesImageUrl = this.mundilabelSettings.MUNDILABEL_PACKAGES_URL;
   }// NgOnInit
 
+  
 }// AboutUsComponent
