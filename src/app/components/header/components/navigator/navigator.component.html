@@ -5,8 +5,7 @@
   <span [class.activated]=" isActivated(4) " class="item" (click)=" navigationTo(4)">{{ 'NAVIGATION_ROUTE.CONTACT' | translate }}</span>
 </div>
 
-<div class="mini-navigator-wrapper">
-  <div>
-    <i class="material-icons">menu</i>
-  </div>    
+
+<div class="mini-navigator-wrapper" (click)="openNavigationSidebar()">
+  <i class="material-icons">menu</i>
 </div>

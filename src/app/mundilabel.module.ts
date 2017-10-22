@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateService, TranslateStaticLoader } from 'ng2-translate';
@@ -19,7 +20,6 @@ import { WallpaperComponent } from './components/wallpaper/wallpaper.component';
 import { MundilabelSettingsService } from './commons/mundilabel.settings';
 import { MundilabelService } from './commons/mundilabel.service';
 import { LocationComponent } from './components/location/location.component';
-import { RawSidebarComponent } from './modules/ngx-rawmaterial/components/raw-sidebar/raw-sidebar.component';
 
 
 
@@ -42,11 +42,11 @@ export function translateLoader(http: Http) {
     NavigatorComponent,
     LogotypeComponent,
     WallpaperComponent,
-    LocationComponent,
-    RawSidebarComponent
+    LocationComponent
   ],
 
   imports: [
+    CommonModule,
     BrowserModule,
     MundilabelRouting,
     RawMaterialModule,

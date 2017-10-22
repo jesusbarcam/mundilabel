@@ -34,6 +34,7 @@ export class NavigatorComponent implements OnInit {
         this.currentUrl = data.url.replace('/', '' );
         this.currentUrl = ( this.currentUrl === '')? MundilabelRoutes[1].path : this.currentUrl;
         this.mundilabelService.activateRoute( this.currentUrl );
+        window.scrollTo(0, 0);
         this.changeDetection.markForCheck();
       }// If
 
@@ -67,7 +68,28 @@ export class NavigatorComponent implements OnInit {
    */
   public navigationTo(indexRoute: number) {
     const nextRoute: string = MundilabelRoutes[ indexRoute ].path;
+
+    if ( this.mundilabelService.sidebarIsOpen() ) {
+      this.mundilabelService.changeSidebarState();
+    }// If
+
     this.router.navigateByUrl( nextRoute );
   }// NavigationTo
+
+
+
+
+  /**
+   * @method
+   * @public
+   * @description
+   * When is a movile device, user click
+   * to open sidebar navigator component
+   */
+  public openNavigationSidebar() {
+    this.mundilabelService.changeSidebarState();
+  }// OpenNavigationSidebar
+
+
 
 }// NavigatorComponent

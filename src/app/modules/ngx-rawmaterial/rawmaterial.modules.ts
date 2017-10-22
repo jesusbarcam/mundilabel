@@ -1,19 +1,39 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { RawDropdownComponent, RawDropdownTriggerDirective } from './components';
+
+import {
+  RawDropdownComponent, RawDropdownTriggerDirective, RawSidebarComponent
+} from './components';
+
+
+import {
+  RawStopScrollDirective
+} from './directives';
 
 
 
 @NgModule({
+  imports: [
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule
+  ],
 
   declarations: [
     RawDropdownComponent,
-    RawDropdownTriggerDirective
+    RawDropdownTriggerDirective,
+    RawSidebarComponent,
+    RawStopScrollDirective
   ],
 
   exports: [
     RawDropdownComponent,
-    RawDropdownTriggerDirective
+    RawDropdownTriggerDirective,
+    RawSidebarComponent,
+    RawStopScrollDirective
   ],
 
   providers: [

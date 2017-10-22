@@ -1,7 +1,11 @@
-<div class="sidebar-menu-wrapper">
 
-</div>
 
-<div class="sidebar-content-wrapper">
-  <ng-content></ng-content>
-</div>
+<ng-container *ngIf=" !isClosed ">
+  <div class="raw-sidebar" [class.open]=" isOpen " [class.close]=" !isOpen " raw-stopscroll >
+    <div class="sidebar-content-wrapper">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-container>
+
+

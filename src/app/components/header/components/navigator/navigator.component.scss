@@ -55,9 +55,18 @@
   align-items: center;
   color: $color-dark;
 
+  &:hover {
+    cursor:pointer;
+  }//hover
+
+  &:active {
+    color:$color-selection;
+  }
+
   i {
-    font-size: $fontSize-icon;
+    font-size: $fontSize-icon + 1rem;
   }//i
+
 }//mini-navigator-wrapper
 
 

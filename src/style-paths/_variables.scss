@@ -29,7 +29,8 @@ $xxl: 1800px;
 // Mains Colors of Application
 $color-coorporative-1: #0D87D8;
 $color-coorporative-2: #E3E8F0;
-$color-selection:#F30707;
+$color-coorporative-3: #ff0000;
+$color-selection:$color-coorporative-1;
 $color-light:#FFFFFF;
 $color-dark:#292F38;
 $color-underline: rgba($color-coorporative-1,0.35);
