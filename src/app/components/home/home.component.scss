@@ -3,6 +3,7 @@
 @import 'classes';
 
 $color-titles: rgba($color-dark,0.85) !default;
+$color-text: rgba($color-dark,0.85);
 $distance-between-blocks: 3rem !default;
 
 
@@ -11,7 +12,7 @@ $distance-between-blocks: 3rem !default;
 .text-content-decorate {
   text-align: justify;
   font-size: $fontSize-paragraph;
-  color: rgba( $color-dark, 0.6);
+  color: $color-text;
 }//text-content-decorate
 
 

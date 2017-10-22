@@ -113,13 +113,6 @@ $color-text: rgba($color-dark,0.5);
     display: none;
   }//navigator-wrapper
 
-}// mediaLG
-
-
-
-
-
-@media (max-width:$lg) { 
   .logotype-wrapper {
     justify-content: center;
   }//logotype-wrapper
@@ -132,4 +125,16 @@ $color-text: rgba($color-dark,0.5);
   .social-media-wrapper {
     justify-content: space-around;
   }//social-media-wrapper
+
+}// mediaLG
+
+
+
+
+
+
+@media (max-width:$sm) { 
+  .address-info{
+    align-items: center !important;
+  }//address-info
 }//mediaMD
