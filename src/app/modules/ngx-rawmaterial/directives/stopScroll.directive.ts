@@ -1,10 +1,13 @@
-import { Directive, HostListener, Inject } from '@angular/core';
+import { Directive, Input, HostListener, Inject, OnChanges, SimpleChanges } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Directive({
   selector: '[raw-stopscroll]'
 })
-export class RawStopScrollDirective {
+export class RawStopScrollDirective implements OnChanges {
+
+  @Input('raw-stopscroll')
+  private stopscroll: boolean;
 
 
   // left: 37, up: 38, right: 39, down: 40,
@@ -13,20 +16,32 @@ export class RawStopScrollDirective {
 
 
   constructor(@Inject(DOCUMENT) private document: any) {
+  }// Constructor
 
-  }
+
+
+
+  ngOnChanges(changes: SimpleChanges) {
+    if ( changes.stopscroll && !changes.stopscroll.currentValue ) {
+      this.enableScroll();
+    }// If
+  }// NgOnChanges
+
+
 
 
   @HostListener('mouseover', [])
   public mouseOver() {
-    this.disableScroll();
+    if ( this.stopscroll ) {
+      this.disableScroll();
+    }// if
   }// MouseOver
 
 
 
   @HostListener('mouseout', [])
   public mouseOut() {
-    this.enableScroll();
+      this.enableScroll();
   }// MouseOut
 
 
