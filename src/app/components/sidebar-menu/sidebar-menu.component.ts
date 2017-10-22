@@ -1,29 +1,24 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MundilabelRoutes } from '../../../../mundilabel.routing';
-import { MundilabelService } from '../../../../commons/mundilabel.service';
+import { MundilabelService } from '../../commons';
+import { MundilabelRoutes } from '../../mundilabel.routing';
 
 
 @Component({
-  selector: 'navigator',
-  templateUrl: './navigator.component.html',
-  styleUrls: ['./navigator.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'sidebar-menu',
+  templateUrl: './sidebar-menu.component.html',
+  styleUrls: ['./sidebar-menu.component.scss']
 })
-export class NavigatorComponent implements OnInit {
-
-
+export class SidebarMenuComponent implements OnInit {
 
   private currentUrl: string;
 
 
-
   constructor(private router: Router,
-              private mundilabelService: MundilabelService,
-              private changeDetection: ChangeDetectorRef) {
-   }// Constructor
-
+              private changeDetection: ChangeDetectorRef,
+              private mundilabelService: MundilabelService ) {
+  }// Constructor
 
 
 
@@ -37,8 +32,6 @@ export class NavigatorComponent implements OnInit {
 
     }); // Subscribe
   }// NgOnInit
-
-
 
 
   /**
@@ -67,19 +60,4 @@ export class NavigatorComponent implements OnInit {
   }// NavigationTo
 
 
-
-
-  /**
-   * @method
-   * @public
-   * @description
-   * When is a movile device, user click
-   * to open sidebar navigator component
-   */
-  public openNavigationSidebar() {
-    this.mundilabelService.changeSidebarState();
-  }// OpenNavigationSidebar
-
-
-
-}// NavigatorComponent
+}// SidebarMenuComponent

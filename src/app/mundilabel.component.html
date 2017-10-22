@@ -1,6 +1,10 @@
 <wallpaper></wallpaper>
 <header></header>
-<raw-sidebar [actived]=" mundilabelService.activatedSidebar$ | async ">hola esto es el contenido del sidebar!</raw-sidebar>
+
+<raw-sidebar [actived]=" mundilabelService.activatedSidebar$ | async ">
+  <sidebar-menu></sidebar-menu>
+</raw-sidebar>
+
 <router-outlet></router-outlet><!--The content below is only a placeholder and can be replaced.-->
 <footer></footer>
 

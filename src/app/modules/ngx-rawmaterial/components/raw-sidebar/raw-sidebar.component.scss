@@ -7,7 +7,6 @@ $zIndex-sidebar: 1500 !default;
 .raw-sidebar {
   position: fixed;
   height: 100vh;
-  padding:0.5rem;
   top:0;
   background-color: #fff;
   z-index: $zIndex-sidebar;

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { MundilabelRoutes } from '../mundilabel.routing';
@@ -15,7 +16,7 @@ export class MundilabelService {
 
 
 
-  constructor() {
+  constructor(private router: Router ) {
 
     this.activatedRoute = new BehaviorSubject<string>( MundilabelRoutes[0].path );
     this.activatedRoute$ = this.activatedRoute.asObservable();
@@ -24,6 +25,8 @@ export class MundilabelService {
     this.activatedSidebar$ = this.activatedSidebar.asObservable();
 
   }// Constructor
+
+
 
 
   /**
@@ -38,6 +41,8 @@ export class MundilabelService {
 
 
 
+
+
   /**
    * @method
    * @public
@@ -46,6 +51,39 @@ export class MundilabelService {
   public activateRoute(nextRoute: string) {
     this.activatedRoute.next( nextRoute );
   }// activateRoute
+
+
+
+
+  /**
+   * @method
+   * @public
+   * @param data
+   */
+  public whenChangeActivedRoute(data: any) {
+    let currentUrl: string = data.url.replace('/', '' );
+    currentUrl = ( currentUrl === '') ? MundilabelRoutes[1].path : currentUrl;
+    this.activateRoute( currentUrl );
+    window.scrollTo(0, 0);
+    return currentUrl;
+  }// WhenChangeActivedRoute
+
+
+
+
+
+  /**
+   * @method
+   * @public
+   * @param indexRoute
+   */
+  public navigationTo(indexRoute: number) {
+    const nextRoute: string = MundilabelRoutes[ indexRoute ].path;
+    if ( this.sidebarIsOpen() ) {
+      this.changeSidebarState();
+    }// If
+    this.router.navigateByUrl( nextRoute );
+  }// NavigationTo
 
 
 

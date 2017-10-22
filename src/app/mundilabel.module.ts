@@ -20,6 +20,7 @@ import { WallpaperComponent } from './components/wallpaper/wallpaper.component';
 import { MundilabelSettingsService } from './commons/mundilabel.settings';
 import { MundilabelService } from './commons/mundilabel.service';
 import { LocationComponent } from './components/location/location.component';
+import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
 
 
 
@@ -42,7 +43,8 @@ export function translateLoader(http: Http) {
     NavigatorComponent,
     LogotypeComponent,
     WallpaperComponent,
-    LocationComponent
+    LocationComponent,
+    SidebarMenuComponent
   ],
 
   imports: [
