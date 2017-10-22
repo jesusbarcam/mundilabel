@@ -11,7 +11,6 @@
   "NAVIGATION_ROUTE":{
     "HOME":"Inicio",
     "ABOUT_US":"Quienes Somos",
-    "HOW_WE_WORK":"Como Trabajamos",
     "LOCATION":"Donde estamos",
     "CONTACT":"Habla con nosotros"
   },
@@ -55,11 +54,13 @@
 
 
   "LOCATION":{
-
+    "SECTION_SUBTITLE":"Estamos cerca de ti preparados para darte servicio",
+    "DESCRIPTION_CONTENT":"Aquí podeís ver donde nos encontramos fisicamente, pero la necesidad de trabajar con nosotros no implica en ningún momento tener que desplazarse, la mejor opción es ponerte en contacto con nosotros via telefonica o correo electronico y te daremos la mejor solución."
   },
 
 
   "CONTACT":{
+    "SECTION_SUBTITLE":"Nuestra ayuda o nuestro consejo en un click",
     "TOP_TITLE":"Te presentamos un formulario donde podrás introducir tus datos, de está forma nosotros podremos responder. Contacta con nosotros y consultanos tus dudas, peticiones, quejas o simplemente pidenos consejo"
   }
 }

@@ -16,6 +16,9 @@ $fontWeight-title: 900;
 $fontWeight-subtitle: 200;
 
 
+$distance-between-blocks: 3rem;
+
+
 // Media queries for responsive design 
 // of this application
 $xs:  0;
@@ -33,4 +36,6 @@ $color-coorporative-3: #ff0000;
 $color-selection:$color-coorporative-1;
 $color-light:#FFFFFF;
 $color-dark:#292F38;
+
 $color-underline: rgba($color-coorporative-1,0.35);
+$color-text: rgba($color-dark,0.85);

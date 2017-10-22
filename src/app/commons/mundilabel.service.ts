@@ -79,7 +79,9 @@ export class MundilabelService {
    */
   public navigationTo(indexRoute: number) {
     const nextRoute: string = MundilabelRoutes[ indexRoute ].path;
-    this.changeSidebarState();
+    if ( this.sidebarIsOpen() ) {
+      this.changeSidebarState();
+    }// If
     this.router.navigateByUrl( nextRoute );
   }// NavigationTo
 

@@ -1,0 +1,69 @@
+
+@import 'variables';
+@import 'classes';
+
+
+
+.text-info {
+  color: $color-text;
+}//text-info
+
+
+
+.mail-input-wrapper {
+  margin-top: $distance-between-blocks;
+  input {
+    width: 100%;
+  }//input
+}//mail-input-wrapper
+
+
+
+.comment-input-wrapper {
+  margin-top:0.5rem;
+  
+  textarea {
+    width: 100%;
+    resize: none;
+  }//textarea
+
+  .button-wrapper {
+    margin-top:1rem;
+    text-align: right;
+
+    a.button-send {
+      padding:0.6rem 2rem;
+      border-radius: 3px;
+      background-color: $color-coorporative-2;
+
+      &:hover {
+        cursor: pointer;
+      }//hover
+
+      &:active {
+        background-color: rgba($color-selection,0.45);
+      }//active
+
+    }//button-send
+  }//button-wrapper
+}//comment-input-wrapper
+
+
+
+.instructions-send-mail {
+  margin-top: $distance-between-blocks;
+}//instructions-send-mail
+
+
+
+
+
+@media (min-width:$xl) {
+
+  .mail-input-wrapper {
+    input {
+      width: 45% !important;
+    }//input
+  }//mail-input-wrapper
+
+}//mediaXL
